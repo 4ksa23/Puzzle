@@ -1,0 +1,55 @@
+body {
+    background: #f7f7f9;
+}
+
+.puzzle-wrap {
+    max-width: 540px;
+    margin: 24px auto;
+}
+
+.board {
+    display: grid;
+    gap: 4px;
+    background: #ddd;
+    border-radius: 8px;
+    padding: 4px;
+    user-select: none;
+}
+
+.tile {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.empty {
+    background: transparent;
+    cursor: default;
+}
+
+/* image background for tiles */
+.tile[data-bg] {
+    background-size: calc(100% * var(--n)) calc(100% * var(--n));
+    background-repeat: no-repeat;
+}
+
+.controls .btn {
+    min-width: 110px;
+}
+
+.info {
+    font-size: 0.95rem;
+}
+
+@media (max-width: 575px) {
+    .puzzle-wrap {
+        padding: 0 12px;
+    }
+}
